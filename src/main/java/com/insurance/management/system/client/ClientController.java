@@ -19,8 +19,8 @@ public class ClientController {
     }
 
     @GetMapping(value = "/search/{id}")
-    public ClientDetails getClient(@PathVariable String id) {
-        return clientDetailsRepository.findById(Long.valueOf(id)).orElse(null);
+    public ClientDetails getClient(@PathVariable Long id) {
+        return clientDetailsRepository.findById(id).orElse(null);
     }
 
 }
