@@ -10,7 +10,7 @@ public class MaturityDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long clientId;
+    private Long policyId;
     private String policyHolderName;
     private double sumAssured;
     private int years;
@@ -21,8 +21,8 @@ public class MaturityDetails {
     public MaturityDetails() {
     }
 
-    public MaturityDetails(Long clientId, String policyHolderName, double sumAssured, int years, double premiumAmount, float rateOfInterest, double paidAmount) {
-        this.clientId = clientId;
+    public MaturityDetails(Long policyId, String policyHolderName, double sumAssured, int years, double premiumAmount, float rateOfInterest, double paidAmount) {
+        this.policyId = policyId;
         this.policyHolderName = policyHolderName;
         this.sumAssured = sumAssured;
         this.years = years;
@@ -39,12 +39,12 @@ public class MaturityDetails {
         this.id = id;
     }
 
-    public Long getClientId() {
-        return clientId;
+    public Long getPolicyId() {
+        return policyId;
     }
 
-    public void setClientId(Long clientId) {
-        this.clientId = clientId;
+    public void setPolicyId(Long policyId) {
+        this.policyId = policyId;
     }
 
     public String getPolicyHolderName() {

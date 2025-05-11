@@ -14,20 +14,18 @@ public class ClientDetails {
     private String dob;
     private String gender;
     private String mobile;
-    private String policyType;
     private String address;
 
     public ClientDetails() {
     }
 
-    public ClientDetails(String name, String email, String password, String dob, String gender, String mobile, String policyType, String address) {
+    public ClientDetails(String name, String email, String password, String dob, String gender, String mobile, String address) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.dob = dob;
         this.gender = gender;
         this.mobile = mobile;
-        this.policyType = policyType;
         this.address = address;
     }
 
@@ -85,14 +83,6 @@ public class ClientDetails {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
-    }
-
-    public String getPolicyType() {
-        return policyType;
-    }
-
-    public void setPolicyType(String policyType) {
-        this.policyType = policyType;
     }
 
     public String getAddress() {

@@ -18,4 +18,9 @@ public class ClientController {
         return clientDetailsRepository.save(clientDetails).getId();
     }
 
+    @GetMapping(value = "/search/{id}")
+    public ClientDetails getClient(@RequestParam Long id) {
+        return clientDetailsRepository.findById(id).orElse(null);
+    }
+
 }
